@@ -24,7 +24,7 @@
 
 清单14.1 使用`UICollectionView`实现的图片传送器
 
-```objective-c
+```objectivec
 
 #import "ViewController.h"
 
@@ -99,7 +99,7 @@ GCD（Grand Central Dispatch）和`NSOperationQueue`很类似，都给我们提�
 
 清单14.2 使用GCD加载传送图片
 
-```objective-c
+```objectivec
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                     cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -155,7 +155,7 @@ GCD（Grand Central Dispatch）和`NSOperationQueue`很类似，都给我们提�
 
 第三种方式就是绕过`UIKit`，像下面这样使用ImageIO框架：
 
-```objective-c
+```objectivec
 NSInteger index = indexPath.row;
 NSURL *imageURL = [NSURL fileURLWithPath:self.imagePaths[index]];
 NSDictionary *options = @{(__bridge id)kCGImageSourceShouldCache: @YES}; 
@@ -186,7 +186,7 @@ CFRelease(source);
 
 清单14.3 强制图片解压显示
 
-```objective-c
+```objectivec
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 ￼{
@@ -229,7 +229,7 @@ CFRelease(source);
 
 清单14.4 使用`CATiledLayer`的图片传送器
 
-```objective-c
+```objectivec
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -380,7 +380,7 @@ CFRelease(source);
 
 清单14.5 添加缓存
 
-```objective-c
+```objectivec
 #import "ViewController.h"
 
 @interface ViewController() <UICollectionViewDataSource>
@@ -479,7 +479,7 @@ PNG图片使用的无损压缩算法可以比使用JPEG的图片做到更快地�
 
 清单14.6
 
-```objective-c
+```objectivec
 #import "ViewController.h"
 
 static NSString *const ImageFolder = @"Coast Photos";
@@ -591,7 +591,7 @@ PNG和JPEG压缩算法作用于两种不同的图片类型：JPEG对于噪点大
 
 清单14.7 从PNG遮罩和JPEG创建的混合图片
 
-```objective-c
+```objectivec
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -669,7 +669,7 @@ Xcode包含了一些命令行工具例如*texturetool*来生成PVRTC图片，但
 
 清单14.8 加载和显示PVRTC图片
 
-```objective-c
+```objectivec
 #import "ViewController.h" 
 #import <QuartzCore/QuartzCore.h> 
 #import <GLKit/GLKit.h>
